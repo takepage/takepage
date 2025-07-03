@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TakePage Hero Section</title>
+  <style>
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .hero .cta {
+      padding: 0.8rem 1.6rem;
+      background: #ff6b6b;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero .cta:hover {
+      background: #ff8787;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>테이크페이지</h1>
+    <p>미래지향적인 온라인 파트너, 브랜드의 가치를 높여드립니다.</p>
+    <button class="cta" onclick="scrollToContact()">상담하기</button>
+  </section>
+  <script>
+    function scrollToContact() {
+      var el = document.querySelector('#contact');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
